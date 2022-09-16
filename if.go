@@ -3,9 +3,13 @@ package sagartest
 import "fmt"
 
 func Neel() {
-	fmt.Println("Hello World")
+	fmt.Println("Hello Neel")
 }
 
 func sagar() {
-	fmt.Println("Hello World")
+	fmt.Println("Hello sagar")
+}
+
+func Ninad() {
+	fmt.Println("Hello ninad")
 }
