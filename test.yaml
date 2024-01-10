@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: argo-backstage
+ annotations:
+   backstage.io/kubernetes-id: dice-roller
+   argocd/app-name: demo-argo
+ labels:
+   backstage.io/kubernetes-id: dice-roller
+   argocd/app-name: demo-argo
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: argo-backstage
+ template:
+   metadata:
+     annotations:
+       backstage.io/kubernetes-id: dice-roller
+       argocd/app-name: demo-argo
+     labels:
+       app: argo-backstage
+       backstage.io/kubernetes-id: dice-roller
+       argocd/app-name: demo-argo
+   spec:
+     containers:
+     - name: spring
+       image: sagar27/petclinic-demo
+       ports:
+       - containerPort: 8080
