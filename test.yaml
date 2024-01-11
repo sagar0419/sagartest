@@ -9,7 +9,7 @@ metadata:
    backstage.io/kubernetes-id: dice-roller
    argocd/app-name: demo-argo
 spec:
- replicas: 2
+ replicas: 1
  selector:
    matchLabels:
      app: argo-backstage
